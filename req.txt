@@ -1,0 +1,4 @@
+cs50
+flask
+Flask-Session
+requests
