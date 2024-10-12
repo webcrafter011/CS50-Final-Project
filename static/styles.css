@@ -1,0 +1,76 @@
+body {
+    font-family: "JetBrains Mono", monospace;
+    background-color: rgba(231, 228, 228, 1);
+    background-image: url("https://cdn.pixabay.com/photo/2016/12/27/19/30/book-1934675_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.main-content {
+    color: white;
+}
+
+::selection {
+    background-color: #333333;
+    /* Gold background for selected text in paragraphs */
+    color: rgb(255, 255, 255);
+    /* Text color for selected text in paragraphs */
+}
+
+.mybg {
+    background-color: antiquewhite;
+}
+
+.gradient-text {
+    font-size: 4rem;
+    /* Adjust the size as needed */
+    background: linear-gradient(45deg, #ff0000, #ea00ff, #3c00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-size: small;
+    font-weight: bold;
+}
+
+footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    /* text-align: center; */
+}
+
+#homepage_image {
+    width: 30vw;
+
+}
+
+.subnav {
+    background-color: rgba(57, 53, 53, 1);
+    display: flex;
+    height: 5vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+@media only screen and (max-width: 500px) {
+    #homepage_image {
+        width: 70vw;
+        /* Adjust the percentage or set a specific width like '500px' */
+    }
+
+    .logo {
+        height: 40px;
+    }
+}
+
+@media only screen and (max-height: 300px) {
+    .subnav {
+        display: none;
+    }
+}
