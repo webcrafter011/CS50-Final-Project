@@ -61,8 +61,6 @@
         Gathering study material for <span class="gradient-text">&nbsp;YOU!</span>
     </div>
 
-
-
     {% if get_flashed_messages() %}
     <header>
         <div class="alert alert-primary mb-0 text-center" role="alert">
@@ -74,23 +72,23 @@
     <main class="container-fluid py-5 text-center">
         {% block main %}
         {% if session["user_id"] %}
-            <div class="main-content">
-                
-                <h2>Facts about ResourceNation</h2>
-                <p>ResourceNation was an idea that I had in my head few months ago</p>
-                <p>ResourceNation was the only reason I decided to take cs50</p>
-                <p>a proper commercial version of ResourceNation will be launched soon which will be owned by one more of my
-                    partner and me</p>
-                <img id="homepage_image" src="/static/ResourceKatta.jpg" alt="ResourceNattion logo">
-            </div>
+        <div class="main-content">
+
+            <h2>Facts about ResourceNation</h2>
+            <p>ResourceNation was an idea that I had in my head few months ago</p>
+            <p>ResourceNation was the only reason I decided to take cs50</p>
+            <p>a proper commercial version of ResourceNation will be launched soon which will be owned by one more of my
+                partner and me</p>
+            <img id="homepage_image" src="/static/ResourceKatta.jpg" alt="ResourceNattion logo">
+        </div>
         {% else %}
-            <div class="main-content">
-                <h1>STUDY WITHOUT</h1>
-                <h1>INCOVINIENCE</h1>
-                <h2>Hello User!</h2>
-                <p>Please create an account by clicking on Register or Login if you already have an account.</p>
-                <img id="homepage_image" src="/static/ResourceKatta.jpg" alt="ResourceNattion logo">
-            </div>
+        <div class="main-content">
+            <h1>STUDY WITHOUT</h1>
+            <h1>INCOVINIENCE</h1>
+            <h2>Hello User!</h2>
+            <p>Please create an account by clicking on Register or Login if you already have an account.</p>
+            <img id="homepage_image" src="/static/ResourceKatta.jpg" alt="ResourceNattion logo">
+        </div>
         {% endif %}
         {% endblock %}
     </main>

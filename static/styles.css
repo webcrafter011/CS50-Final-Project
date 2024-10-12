@@ -6,10 +6,14 @@ main {
     background-color: rgba(231, 228, 228, 1);
     background-image: url("https://cdn.pixabay.com/photo/2016/12/27/19/30/book-1934675_1280.jpg");
     background-repeat: no-repeat;
-    background-size: cover; /* Cover the entire area */
-    background-attachment: scroll; /* Change to scroll so it moves with content */
-    background-position: center top; /* Position at the top center */
-    padding-top: 5vh; /* Add padding to push content down below subnav */
+    background-size: cover;
+    /* Cover the entire area */
+    background-attachment: scroll;
+    /* Change to scroll so it moves with content */
+    background-position: center top;
+    /* Position at the top center */
+    padding-top: 5vh;
+    /* Add padding to push content down below subnav */
 }
 
 
@@ -52,6 +56,18 @@ footer {
 
 #homepage_image {
     width: 30vw;
+    margin-top: 20px;
+    /* Add margin to separate from text */
+    position: relative;
+    /* Ensure it's positioned according to the flow */
+    z-index: 2;
+    border-radius: 15px;
+    transition: all 0.2s;
+}
+
+#homepage_image:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 
 }
 
@@ -59,10 +75,11 @@ footer {
     background-color: rgba(57, 53, 53, 1);
     display: flex;
     height: 5vh;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     justify-content: center;
     color: white;
+
 }
 
 @media only screen and (max-width: 500px) {
