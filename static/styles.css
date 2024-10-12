@@ -1,10 +1,17 @@
 body {
     font-family: "JetBrains Mono", monospace;
+}
+
+main {
     background-color: rgba(231, 228, 228, 1);
     background-image: url("https://cdn.pixabay.com/photo/2016/12/27/19/30/book-1934675_1280.jpg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover; /* Cover the entire area */
+    background-attachment: scroll; /* Change to scroll so it moves with content */
+    background-position: center top; /* Position at the top center */
+    padding-top: 5vh; /* Add padding to push content down below subnav */
 }
+
 
 .main-content {
     color: white;
