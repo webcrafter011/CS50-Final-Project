@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+.body {
+    font-family: "JetBrains Mono", monospace;
+}
+
+main {
+    background-color: rgba(231, 228, 228, 1);
+    background-image: url("https://cdn.pixabay.com/photo/2016/12/27/19/30/book-1934675_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Cover the entire area */
+    background-attachment: scroll;
+    /* Change to scroll so it moves with content */
+    background-position: center top;
+    /* Position at the top center */
+    padding-top: 5vh;
+    /* Add padding to push content down below subnav */
+}
+
+
+.main-content {
+    color: white;
+}
+
+
+.mybg {
+    background-color: antiquewhite;
+}
+
+.gradient-text {
+    font-size: 4rem;
+    /* Adjust the size as needed */
+    background: linear-gradient(45deg, #ff0000, #ea00ff, #3c00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-size: small;
+    font-weight: bold;
+}
+
+footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    /* text-align: center; */
+}
+
+#homepage_image {
+    width: 20vw;
+    margin-top: 20px;
+    /* Add margin to separate from text */
+    position: relative;
+    /* Ensure it's positioned according to the flow */
+    z-index: 2;
+    border-radius: 15px;
+    transition: all 0.2s;
+}
+
+#homepage_image:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+
+}
+
+.subnav {
+    background-color: rgba(57, 53, 53, 1);
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+
+@media only screen and (max-width: 500px) {
+    #homepage_image {
+        width: 70vw;
+        /* Adjust the percentage or set a specific width like '500px' */
+    }
+
+    .logo {
+        height: 40px;
+    }
+}
+
+@media only screen and (max-height: 300px) {
+    .subnav {
+        display: none;
+    }
+}

@@ -1,32 +1,28 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+.body {
     font-family: "JetBrains Mono", monospace;
 }
 
-main {
+/* main {
     background-color: rgba(231, 228, 228, 1);
     background-image: url("https://cdn.pixabay.com/photo/2016/12/27/19/30/book-1934675_1280.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     /* Cover the entire area */
-    background-attachment: scroll;
+    /* background-attachment: scroll; */
     /* Change to scroll so it moves with content */
-    background-position: center top;
+    /* background-position: center top; */
     /* Position at the top center */
-    padding-top: 5vh;
+    /* padding-top: 5vh; */
     /* Add padding to push content down below subnav */
-}
+/* } */
 
 
 .main-content {
     color: white;
 }
 
-::selection {
-    background-color: #333333;
-    /* Gold background for selected text in paragraphs */
-    color: rgb(255, 255, 255);
-    /* Text color for selected text in paragraphs */
-}
 
 .mybg {
     background-color: antiquewhite;
@@ -55,7 +51,7 @@ footer {
 }
 
 #homepage_image {
-    width: 30vw;
+    width: 20vw;
     margin-top: 20px;
     /* Add margin to separate from text */
     position: relative;
