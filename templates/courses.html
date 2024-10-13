@@ -1,38 +1,101 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    : Courses
+: Courses
 {% endblock %}
-{% block main %} 
-<style>
-    
-</style>
-<div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title text-center">BCA</h5>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+
+{% block main %}
+  <div class="ag-format-container">
+    <div class="ag-courses_box">
+      <!-- BCA Course -->
+      <div class="ag-courses_item">
+        <a href="{{ url_for('course', course_name='BCA') }}" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+
+          <div class="ag-courses-item_title">
+            BCA
+          </div>
+
+          <div class="ag-courses-item_date-box">
+            <p>This is a collection of all the previous year question papers of BCA</p>
+          </div>
+        </a>
       </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title text-center">BBA</h5>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+
+      <!-- BBA Course -->
+      <div class="ag-courses_item">
+        <a href="{{ url_for('course', course_name='BBA') }}" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+
+          <div class="ag-courses-item_title">
+            BBA
+          </div>
+
+          <div class="ag-courses-item_date-box">
+            <p>This is a collection of all the previous year question papers of BBA</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- B.Com Course -->
+      <div class="ag-courses_item">
+        <a href="{{ url_for('course', course_name='B.Com') }}" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+
+          <div class="ag-courses-item_title">
+            B.Com
+          </div>
+
+          <div class="ag-courses-item_date-box">
+            <p>This is a collection of all the previous year question papers of B.Com</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- BSc Course -->
+      <div class="ag-courses_item">
+        <a href="{{ url_for('course', course_name='BSc') }}" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+
+          <div class="ag-courses-item_title">
+            BSc
+          </div>
+
+          <div class="ag-courses-item_date-box">
+            <p>This is a collection of all the previous year question papers of BSc</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- MSc Course -->
+      <div class="ag-courses_item">
+        <a href="{{ url_for('course', course_name='MSc') }}" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+
+          <div class="ag-courses-item_title">
+            MSc
+          </div>
+
+          <div class="ag-courses-item_date-box">
+            <p>This is a collection of all the previous year question papers of MSc</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- BA Course -->
+      <div class="ag-courses_item">
+        <a href="{{ url_for('course', course_name='BA') }}" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+
+          <div class="ag-courses-item_title">
+            BA
+          </div>
+
+          <div class="ag-courses-item_date-box">
+            <p>This is a collection of all the previous year question papers of BA</p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
-<div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title text-center">B.Com</h5>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-</div>
 {% endblock %}

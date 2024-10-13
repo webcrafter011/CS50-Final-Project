@@ -25,6 +25,7 @@ db.execute(
     """
 )
 
+
 # Login required decorator
 def login_required(f):
     @wraps(f)
@@ -32,6 +33,7 @@ def login_required(f):
         if session.get("user_id") is None:
             return redirect("/login")
         return f(*args, **kwargs)
+
     return decorated_function
 
 
@@ -129,6 +131,22 @@ def courses():
         pass
     else:
         return render_template("courses.html", css_file="css/styles3.css")
+
+
+@app.route("/courses/<course_name>")
+@login_required
+def course(course_name):
+    # Path to the course-specific folder inside the "pdfs" directory
+    course_dir = os.path.join("static", "pdfs", course_name)
+
+    # Check if the directory exists
+    if not os.path.exists(course_dir):
+        return apology("Course not found", 404)
+
+    # Get the list of PDF files in the directory
+    pdf_files = [file for file in os.listdir(course_dir) if file.endswith(".pdf")]
+
+    return render_template("course.html", course_name=course_name, pdf_files=pdf_files, css_file="css/styles2.css")
 
 
 @app.route("/logout")
