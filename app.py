@@ -146,7 +146,7 @@ def course(course_name):
     # Get the list of PDF files in the directory
     pdf_files = [file for file in os.listdir(course_dir) if file.endswith(".pdf")]
 
-    return render_template("course.html", course_name=course_name, pdf_files=pdf_files, css_file="css/styles2.css")
+    return render_template("course.html", course_name=course_name, pdf_files=pdf_files, css_file="css/courseStyles.css")
 
 
 @app.route("/logout")

@@ -5,16 +5,44 @@
 {% endblock %}
 
 {% block main %}
-  <div class="pdf-list">
+<div class="pdf-list">
     <h2>{{ course_name }} Question Papers</h2>
-    <ul>
-      {% for pdf in pdf_files %}
-      <li>
-        <a href="{{ url_for('static', filename='pdfs/' + course_name + '/' + pdf) }}" download="{{ pdf }}">
-          {{ pdf }}
-        </a>
-      </li>
-      {% endfor %}
+    <ul class="no-style card-list">
+        {% for pdf in pdf_files %}
+        <li class="card-item">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/static/ResourceKatta.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a target="_blank" href="{{ url_for('static', filename='pdfs/' + course_name + '/' + pdf) }}" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
     </ul>
-  </div>
+</div>
 {% endblock %}
+
+<style>
+.card-list {
+    display: flex;               /* Use flexbox for horizontal alignment */
+    flex-wrap: wrap;            /* Allows cards to wrap to the next line if necessary */
+    justify-content: space-around; /* Adjusts spacing between cards */
+    padding: 0;                 /* Remove padding */
+    margin: 0;                  /* Remove margin */
+}
+
+.card-item {
+    margin: 10px;               /* Margin around each card item */
+}
+
+.card {
+    /* Additional styling for card can go here */
+    transition: transform 0.2s; /* Optional: Add a hover effect */
+}
+
+.card:hover {
+    transform: scale(1.05);     /* Optional: Slightly scale up on hover */
+}
+</style>
